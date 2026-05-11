@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HU SERVICES | Portfolio &amp; Pricing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error": "#ffb4ab",
+                      "surface-container-highest": "#353434",
+                      "on-secondary-fixed": "#171b28",
+                      "error-container": "#93000a",
+                      "on-secondary": "#2c303d",
+                      "inverse-on-surface": "#313030",
+                      "on-tertiary-fixed-variant": "#474646",
+                      "surface": "#141313",
+                      "on-surface": "#e5e2e1",
+                      "on-primary-container": "#797777",
+                      "outline-variant": "#444748",
+                      "surface-dim": "#141313",
+                      "surface-tint": "#c9c6c5",
+                      "primary": "#c9c6c5",
+                      "secondary-fixed-dim": "#c3c6d7",
+                      "on-primary-fixed": "#1c1b1b",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-container-high": "#2b2a2a",
+                      "on-primary": "#313030",
+                      "surface-container": "#201f1f",
+                      "outline": "#8e9192",
+                      "primary-fixed": "#e5e2e1",
+                      "background": "#141313",
+                      "on-error": "#690005",
+                      "secondary": "#c3c6d7",
+                      "inverse-surface": "#e5e2e1",
+                      "on-background": "#e5e2e1",
+                      "primary-fixed-dim": "#c9c6c5",
+                      "on-secondary-container": "#b5b8c9",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#474646",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "secondary-fixed": "#dfe2f3",
+                      "tertiary-fixed": "#e5e2e1",
+                      "on-secondary-fixed-variant": "#434654",
+                      "on-tertiary-container": "#797777",
+                      "tertiary-fixed-dim": "#c9c6c5",
+                      "secondary-container": "#454957",
+                      "tertiary-container": "#050505",
+                      "surface-bright": "#3a3939",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-tertiary": "#313030",
+                      "on-surface-variant": "#c4c7c7",
+                      "primary-container": "#050505",
+                      "surface-variant": "#353434",
+                      "inverse-primary": "#5f5e5e",
+                      "tertiary": "#c9c6c5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "80px",
+                      "container-max": "1440px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Montserrat"],
+                      "body-lg": ["Inter"],
+                      "headline-lg-mobile": ["Montserrat"],
+                      "display-lg": ["Montserrat"],
+                      "headline-md": ["Montserrat"],
+                      "body-md": ["Inter"],
+                      "display-lg-mobile": ["Montserrat"],
+                      "label-caps": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-md": ["30px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                      "label-caps": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(43, 42, 42, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(195, 198, 215, 0.1);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px rgba(195, 198, 215, 0.15);
+        }
+        .gradient-border-mask {
+            position: relative;
+        }
+        .gradient-border-mask::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(to bottom right, #c9c6c5, transparent, #c3c6d7);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface/30 backdrop-blur-xl border-b border-outline-variant/20 shadow-[0_0_20px_rgba(195,198,215,0.1)]">
+<div class="text-headline-md font-display-lg-mobile tracking-tighter text-on-surface">HU SERVICES</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-medium hover:text-primary hover:drop-shadow-[0_0_8px_rgba(195,198,215,0.8)] transition-all duration-300 font-label-caps text-label-caps" href="#">Solutions</a>
+<a class="text-on-surface-variant font-medium hover:text-primary hover:drop-shadow-[0_0_8px_rgba(195,198,215,0.8)] transition-all duration-300 font-label-caps text-label-caps" href="#">Talent</a>
+<a class="text-on-surface-variant font-medium hover:text-primary hover:drop-shadow-[0_0_8px_rgba(195,198,215,0.8)] transition-all duration-300 font-label-caps text-label-caps" href="#">Agency</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-caps text-label-caps" href="#">Case Studies</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps text-label-caps hover:scale-95 transition-transform active:scale-90">Get Started</button>
+<span class="material-symbols-outlined text-on-surface cursor-pointer p-2 hover:bg-surface-container rounded-full transition-colors" data-icon="grid_view">grid_view</span>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Portfolio Showcase -->
+<section class="px-margin-desktop mb-32">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest block mb-4 uppercase">Selected Works</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight">Crafting Digital <br/><span class="text-outline">Distinction.</span></h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-sm pb-2">
+                    A curation of high-fidelity solutions engineered for the world's most ambitious brands.
+                </p>
+</div>
+<!-- Bento Grid Portfolio -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Project 1: Large Featured -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl h-[500px] glass-card gradient-border-mask">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="A cinematic, high-contrast visual of a dark, crystalline digital interface displaying complex data structures. The lighting is low-key with sharp cyan and purple highlights refracting through glass surfaces. The style is ultra-modern and premium, emphasizing depth and technical sophistication within a vast, dark digital void." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDVvNsTXCbZTXLazmQNdmtuj33nSiI2o2NDu2nh9QhyEbiTNgi-Vf9PG12LLs1qDwrldwieiiN10ecTQ1dfGJiXbFME82sZrFGl2pFmZSiOkzN7fh45BOor0pOFUmQnqyr9asIk3nIWw-ZNI5q29S4rQTodYyfR314Gb1W9H1x7iYng7Q_gdqZSipfL-wQjxeuEB8HLhhPQgsshqrKDH_lx-n2NWkq_qgW0Xh05PBRPfJXHo5hplT78X2QvZgAZ2yR3ZceZDUUZ-Ox"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent flex flex-col justify-end p-10">
+<span class="font-label-caps text-label-caps text-secondary mb-2">Fintech Architecture</span>
+<h3 class="font-headline-lg text-headline-md md:text-headline-lg">Lumina Crypto Core</h3>
+<div class="flex items-center gap-4 mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="px-4 py-1 rounded-full border border-outline-variant/30 text-[12px] font-label-caps">WEB3</span>
+<span class="px-4 py-1 rounded-full border border-outline-variant/30 text-[12px] font-label-caps">UX SYSTEM</span>
+</div>
+</div>
+</div>
+<!-- Project 2: Tall -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl h-[500px] glass-card gradient-border-mask">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50" data-alt="A macro shot of advanced hardware components emitting a soft electric cyan glow. The image uses a shallow depth of field to focus on the intricate textures of the tech. The mood is mysterious and high-end, featuring a dark monochromatic palette with subtle metallic reflections and atmospheric haze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5YjxfE5CmIWs-_f-sF6VoBv6LarryPVCVc9X8A4p4cI8UMZQAy9n3vC_zNWxyRq1TsretXIgukw2GsA6ePC4p3ffLAhbKz2v5eb3H1n1PRKQig6qcdzfcRCsKKCAKridiAtEQmK40KsJ8mwH0DCl1mder3NFACl81yqLxBXCGzPckTKwOCeb1iYZ1LycAmWEgZVLeVNMbzCRvsfAW9bjPzMqmYA5_RywcucYNDqvqLe6ydlve--FqzNKqXECtvQxEQPUSpJwBDkAQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent flex flex-col justify-end p-8">
+<span class="font-label-caps text-label-caps text-secondary mb-2">Security Tech</span>
+<h3 class="font-headline-md text-headline-md">Aeon Shield</h3>
+</div>
+</div>
+<!-- Project 3: Medium -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl h-[400px] glass-card gradient-border-mask">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="An abstract cinematic render of fluid silk-like waves in deep navy and electric purple. The lighting creates a sense of luxury and motion, with soft neon edges defining the curves. The overall aesthetic is ethereal and expensive, fitting for a world-class digital agency's branding visuals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoVz1znvEkSA3CNOH3TzxRK_WMCQ8oeUgigTBDvDJ-R7RVJaSDcWSSMjFbmn9jNM3Rfa8ikUiwOtPozANTBwwyofJrn32KkQzj62VfbTKZHfy4IbuKLJiBDyS4QEDSWQK2bWBjOyzZICyV-c2M5A97aijqRyFmKG7iaIyykbKnbiv1oHZ5agj73UXuNc1T7INvXc60Y9Jrc8cChyA0oWzTFVCc7rqmdf7Yi8AGATwO0Mk1axj4HY4bBxe8OHpRzfjkNar_vcMCyVbH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent flex flex-col justify-end p-8">
+<span class="font-label-caps text-label-caps text-secondary mb-2">Brand Identity</span>
+<h3 class="font-headline-md text-headline-md">Veloce AI</h3>
+</div>
+</div>
+<!-- Project 4: Large Horizontal -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl h-[400px] glass-card gradient-border-mask">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40" data-alt="A breathtaking view of the earth from orbit at night, with city lights forming glowing neural networks across the continents. The color palette is dominated by midnight blues and electric cyans. The image is rendered with a cinematic, high-gloss finish that evokes global connectivity and premium technological reach." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVjRrOODXBwJdyCdlLsGcqoawvU3KC_pW0rDQvaLHpZ4nDWP79rFgcOMoDfbFy3f75nk0fz_tuCUPKu9wI8BTPVGBv4tj6xgoVRkcnCLp0_yvA18D7n0w2wHelzhna2VpZoEjViUzAt9CwZM6PxM08ohbCD16roceLDO0DfiEs54rK3LMBsLqEjoiDflsUvpzKu0a5dalDDgUh1DFrn5oi5vpSS_HuKdw50Sji3gzT47_C0OGuTAk9OUr0__OhticHhI6jddj_BH5T"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent flex flex-col justify-end p-10">
+<span class="font-label-caps text-label-caps text-secondary mb-2">Global Logistics</span>
+<h3 class="font-headline-lg text-headline-md md:text-headline-lg">Atlas Global Hub</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Plans -->
+<section class="bg-surface-container-lowest py-32 px-margin-desktop relative overflow-hidden">
+<div class="absolute top-0 right-0 w-96 h-96 bg-secondary/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="text-center mb-20">
+<span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4">Investment Tiers</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Scalable Digital Mastery</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto">Flexible models designed to accelerate growth from seed-stage startups to global conglomerates.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Tier 1 -->
+<div class="glass-card gradient-border-mask p-10 rounded-xl flex flex-col hover:-translate-y-2 transition-all duration-300 group">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h4 class="font-headline-md text-headline-md mb-1">Essential</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Rapid Launch</p>
+</div>
+<span class="material-symbols-outlined text-primary scale-125" data-icon="bolt">bolt</span>
+</div>
+<div class="mb-8">
+<span class="text-4xl font-bold font-display-lg-mobile">$5k</span>
+<span class="text-on-surface-variant font-body-md">/month</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+                            UI/UX Foundation
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+                            Frontend Development
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+                            Standard Support
+                        </li>
+</ul>
+<button class="w-full py-4 rounded-lg border border-outline-variant font-label-caps text-label-caps group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">Choose Essential</button>
+</div>
+<!-- Tier 2 - Featured -->
+<div class="glass-card gradient-border-mask p-10 rounded-xl flex flex-col border-secondary/30 bg-surface-variant/20 -translate-y-4 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 bg-secondary text-on-secondary px-4 py-1 font-label-caps text-[10px] tracking-tighter uppercase">Most Popular</div>
+<div class="flex justify-between items-start mb-8">
+<div>
+<h4 class="font-headline-md text-headline-md mb-1 text-secondary">Elite</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Full Orchestration</p>
+</div>
+<span class="material-symbols-outlined text-secondary scale-150" data-icon="auto_awesome" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="mb-8">
+<span class="text-4xl font-bold font-display-lg-mobile">$12k</span>
+<span class="text-on-surface-variant font-body-md">/month</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 font-body-md">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+                            End-to-End Product Design
+                        </li>
+<li class="flex items-center gap-3 font-body-md">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+                            Advanced Backend Infrastructure
+                        </li>
+<li class="flex items-center gap-3 font-body-md">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+                            Custom AI Integrations
+                        </li>
+<li class="flex items-center gap-3 font-body-md">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+                            24/7 Priority Channel
+                        </li>
+</ul>
+<button class="w-full py-4 rounded-lg bg-secondary text-on-secondary-fixed font-label-caps text-label-caps hover:scale-95 transition-transform">Get Started Now</button>
+</div>
+<!-- Tier 3 -->
+<div class="glass-card gradient-border-mask p-10 rounded-xl flex flex-col hover:-translate-y-2 transition-all duration-300 group">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h4 class="font-headline-md text-headline-md mb-1">Enterprise</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Global Reach</p>
+</div>
+<span class="material-symbols-outlined text-primary scale-125" data-icon="hub">hub</span>
+</div>
+<div class="mb-8">
+<span class="text-4xl font-bold font-display-lg-mobile">Custom</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+                            Dedicated Talent Squads
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+                            Legacy Modernization
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+                            On-Premise Security Ops
+                        </li>
+</ul>
+<button class="w-full py-4 rounded-lg border border-outline-variant font-label-caps text-label-caps group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">Contact Sales</button>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-32 px-margin-desktop overflow-hidden">
+<div class="max-w-6xl mx-auto glass-card gradient-border-mask rounded-3xl p-12 md:p-20 relative">
+<span class="material-symbols-outlined text-primary/20 text-[120px] absolute -top-10 -left-4" data-icon="format_quote">format_quote</span>
+<div class="flex flex-col md:flex-row items-center gap-16 relative z-10">
+<div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden flex-shrink-0 border-2 border-secondary/20 p-2">
+<img class="w-full h-full object-cover rounded-full" data-alt="A professional portrait of a tech executive in a high-end, minimalist studio. The lighting is soft and directional, creating elegant shadows on a dark gray backdrop. The subject has a confident expression, wearing premium business attire. The image is clean, sharp, and has a cinematic luxury feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXpS7szW1qHWc-EgSrvs5_7hWndblbNvSmdEQpBkTHmGtXhWVxeN_AObvA5uAJNt8BK4VZh_OlwdPetrkpXdvoY6fGu0TY-LgdJ-UICSx0v82NuEj7cdPLRUp8g2-pCIZYZkH7Sh1loyDMmF1oWU1ZlionUZHU2JwFW5F6rWjR284MQhQKsdKvdcEBR5H4vVmZLJRMX0HDdj6pXkzx_zpyGLhzmrnAojO2TfNgB0rb5hLFOQ5Fsu5qMlgiSmQMHk3SYdxOknYQCshu"/>
+</div>
+<div>
+<p class="font-headline-md text-headline-md md:text-headline-lg italic mb-8 text-on-surface leading-snug">
+                            "HU Services didn't just build our platform; they orchestrated a digital revolution for our brand identity. The technical precision is unmatched."
+                        </p>
+<div>
+<h5 class="font-headline-md text-headline-md text-secondary">Elena Rodriguez</h5>
+<p class="font-label-caps text-label-caps text-on-surface-variant">CTO, OmniSphere Global</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center gap-4 mt-12">
+<div class="w-12 h-1 bg-secondary rounded-full"></div>
+<div class="w-3 h-1 bg-outline-variant rounded-full"></div>
+<div class="w-3 h-1 bg-outline-variant rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Contact Form -->
+<section class="py-32 px-margin-desktop bg-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4">Transmission</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8">Let's Build the <span class="text-outline">Next Reality.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Reach out to our strategy team to discuss your next high-impact project.</p>
+<div class="space-y-8">
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center border border-outline-variant/30 group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Inquiries</p>
+<p class="font-body-lg font-semibold">hello@huservices.tech</p>
+</div>
+</div>
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center border border-outline-variant/30 group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Command Center</p>
+<p class="font-body-lg font-semibold">London, UK | Zurich, CH</p>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 rounded-2xl border-outline-variant/20 shadow-2xl">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-[12px] text-on-surface-variant uppercase">Full Name</label>
+<input class="w-full bg-surface-container-highest border-none border-b-2 border-outline-variant focus:ring-0 focus:border-secondary transition-colors rounded-lg py-3 text-on-surface placeholder:text-outline-variant" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[12px] text-on-surface-variant uppercase">Email Address</label>
+<input class="w-full bg-surface-container-highest border-none border-b-2 border-outline-variant focus:ring-0 focus:border-secondary transition-colors rounded-lg py-3 text-on-surface placeholder:text-outline-variant" placeholder="john@enterprise.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[12px] text-on-surface-variant uppercase">Service Interest</label>
+<select class="w-full bg-surface-container-highest border-none border-b-2 border-outline-variant focus:ring-0 focus:border-secondary transition-colors rounded-lg py-3 text-on-surface">
+<option>Product Design</option>
+<option>Full-Stack Engineering</option>
+<option>AI Implementation</option>
+<option>Enterprise Solutions</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[12px] text-on-surface-variant uppercase">Project Brief</label>
+<textarea class="w-full bg-surface-container-highest border-none border-b-2 border-outline-variant focus:ring-0 focus:border-secondary transition-colors rounded-lg py-3 text-on-surface placeholder:text-outline-variant" placeholder="Tell us about your vision..." rows="4"></textarea>
+</div>
+<button class="w-full py-5 bg-primary text-on-primary font-label-caps text-label-caps rounded-xl hover:scale-[0.98] active:scale-95 transition-all shadow-[0_10px_20px_rgba(201,198,197,0.2)] flex items-center justify-center gap-3">
+                            Initialize Protocol
+                            <span class="material-symbols-outlined" data-icon="trending_flat">trending_flat</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter bg-surface-container-lowest border-t border-outline-variant/10 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+<div class="flex flex-col gap-4">
+<div class="font-headline-lg text-headline-lg text-primary tracking-widest">HU SERVICES</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs text-center md:text-left">© 2024 HU Services. Orchestrating digital excellence.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-caps text-label-caps focus:outline-none ring-1 ring-secondary/50" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-caps text-label-caps" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-caps text-label-caps" href="#">Careers</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-caps text-label-caps" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-[18px]" data-icon="language">language</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-[18px]" data-icon="share">share</span>
+</div>
+</div>
+</footer>
+</body></html>
